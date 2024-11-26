@@ -1,19 +1,26 @@
-소개
-이 프로젝트는 여러 개의 멀티스레딩 예제를 다룹니다. 각 예제는 다양한 동기화 기법을 활용하여 멀티스레딩 환경에서 발생할 수 있는 경쟁 조건(race condition)과 이를 해결하기 위한 동기화 메커니즘을 보여줍니다. 프로그램들은 서로 다른 문제를 다루며, pthread 라이브러리를 사용하여 작성되었습니다.
+# README: 멀티스레딩 예제
 
-프로그램 목록
-책장 프로그램 (Producer-Consumer) - 경쟁 조건과 동기화 없이 책을 추가하고 대여하는 문제
-책장 프로그램 (Producer-Consumer with Mutex and Condition Variables) - Mutex와 Condition Variables을 사용하여 경쟁 조건을 해결한 버전
-도서 리뷰 시스템 (Reader-Writer 문제) - 리뷰를 읽는 독자와 작성하는 작가의 동기화 문제
-도서 리뷰 시스템 (Reader-Writer 문제 with Mutex and Condition Variables) - Mutex와 Condition Variables을 사용하여 동기화 문제를 해결한 버전
-컴파일 방법
-모든 프로그램은 gcc 컴파일러를 사용하여 컴파일할 수 있습니다. 각 파일에 대해 다음 명령어를 사용하십시오.
-bash
-코드 복사
+## 소개
+
+이 프로젝트는 여러 개의 멀티스레딩 예제를 다룹니다. 각 예제는 다양한 동기화 기법을 활용하여 멀티스레딩 환경에서 발생할 수 있는 경쟁 조건(race condition)과 이를 해결하기 위한 동기화 메커니즘을 보여줍니다. 프로그램들은 서로 다른 문제를 다루며, `pthread` 라이브러리를 사용하여 작성되었습니다.
+
+### 프로그램 목록
+
+1. **책장 프로그램 (Producer-Consumer)** - 경쟁 조건과 동기화 없이 책을 추가하고 대여하는 문제
+2. **책장 프로그램 (Producer-Consumer with Mutex and Condition Variables)** - Mutex와 Condition Variables을 사용하여 경쟁 조건을 해결한 버전
+3. **도서 리뷰 시스템 (Reader-Writer 문제)** - 리뷰를 읽는 독자와 작성하는 작가의 동기화 문제
+4. **도서 리뷰 시스템 (Reader-Writer 문제 with Mutex and Condition Variables)** - Mutex와 Condition Variables을 사용하여 동기화 문제를 해결한 버전
+
+## 컴파일 방법
+
+1. 모든 프로그램은 `gcc` 컴파일러를 사용하여 컴파일할 수 있습니다. 각 파일에 대해 다음 명령어를 사용하십시오.
+
+```bash
 gcc -o bookshelf bookshelf.c -lpthread
 gcc -o review review.c -lpthread
 gcc -o review_mutex review_mutex.c -lpthread
 gcc -o review_condition review_condition.c -lpthread
+```
 -lpthread 옵션은 POSIX 스레드 라이브러리를 링크합니다.
 컴파일 후, 생성된 실행 파일을 실행할 수 있습니다.
 bash
@@ -57,16 +64,13 @@ Mutex와 Condition Variables를 적절히 사용하면, 멀티스레딩 환경�
 결론
 이 프로젝트는 멀티스레딩의 기본적인 문제들과 이를 해결하는 다양한 방법을 배우는 데 도움이 됩니다. 경쟁 조건을 해결하기 위한 다양한 동기화 기법을 적용해 보며, 실제로 시스템에서 멀티스레드 작업을 처리할 때 고려해야 할 점들을 학습할 수 있었습니다.
 
-위의 내용으로 README 파일을 업데이트해 주시길 권장합니다. 4개의 프로그램 모두 정확하게 포함되어 있으며, 각 프로그램의 동작 및 해결책을 설명하고 있습니다.
+go
+코드 복사
+
+위 내용을 그대로 복사하여 `README.md` 파일에 붙여넣기 하시면 됩니다.
 
 
 
 
 
 
-
-
-
-
-
-ChatGPT는 실수를 할 수 있습니다. 중요한
